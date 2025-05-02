@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="500x500"
+      href="/assets/icon-500-8d8c2208.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAj/SURBVHgBxVdrjFTlGX7OZc7M7LKzl9nufRF3WUXcFVwUjVBJa7SEFGuLVdvS2v6g0ZCUxGDapmka29jYxLb0lsY2xrRGpElbKkQDlaVpuNiiAgrC4sJe2dn7zs7tzMy5+nzfmWXB6P7lJLtz5pwz3/e8z/u8z/sexUzN+LiOh4rrfFx3APr8iaIoVy76vn/lWnA5uCf+izu+50HVQ3AdG5qqwuP3TzoUReVa3vyXTweQNgs4/P934fHhZCaDJx55GHbRhFkoolCw4bguVE3D22fPYzadwoa77sTeQz3Y9vBX8MdX/oYdX98in5EbwiMgH8lcHgeOvIXHv7hRIs/lTcBT4DI4hU8FIfJciDCTy6GusRUbt23Hv373PF7d/zrWdHWit68fyXQGD6y/GxoXTswkUR6N4qFtO/DSr55FXXUM41MziITDyBVMeK6HeGUMK9rb0LBuI9LvHcfQ0ACe/8se3HfXHciaJpa3tGJ0ahJdHW0oi0QDDVSUl0s0mqpg75s9jHAtnvnDn1FbU4mvPbgJd2/9LmLlMViWi97+IbR1tMPQQigvX4I//WMffvnSbtRWfwbf+/mv0RBvwNjEDNKnj+PeLzxEYC7u7LwVnR034/d7XkNrcwsyZNVzQ5hOFgMAIjuJRAKDlwbx2KaN+O3Lu7GsuZ7pyOGve/fh6W89ylTkcep8L858eAk603GW7AwMjWEoMYXuzi68vO8gnnzsUex69e9kqRKbt+/E+vvvJyM1OHjsBB7/0U/RWl+HU2d7MTeXQ972mLJSCqQYQiFoIQO5TBpljFZVPex4bhe2P7IFsbIIChRcLFpOsLrUhsM8F2yHNJYhz4gs2+YahgTqUpSx8iiMkI6J2TnU18Rh8fc2nxeiLIto1IPF++oCgI8fHsVihCPIZOdQMG0hfbi87vCf4/iwXZ+LQn76BMNiCKqmJC6V52INh0UgROnxuXiVziA0uK74vRcIcjEnzJl55PP5oET5J6rTJRDfVUpgfC4GWT1cDxofE0BEVfKWfJ6yYqRARFflNXHfsUWt+NBVZcEHPulwShHI0uK5pqkyQkVE6/tycV+ecyEt8AixeUhXEBaYVV9uLO6JIFyinBoZQMPylcjnTLnmogCEQqUpicjEAo6o8cCO5n1FkC6YYFbAlCJiCDBMnyqhSnaKtgCjIZdKYWxqFpliL3RDR3Vdy+IpSGdNWbsyq16QU5f0O54n6RQbitItZUgyJegRmhCbC8Ep5Fx4yGD/KOlxKfSQDCASCct0LMqAeFA6qRKIUsRkhHzSq0j6VZYRb8joHSECqNKmJUdKENfkaAK5nIVINMJU6aiorJJohdOKQ198+yAqsZauqtJC7ZLixTdZAUqQ9yA1ge97fkmEPK9tbEaNAM9NDTrmCz/cgVUbPguN5bv0xhWfngKx3GwqK9MQ5DugVVPnteHJ/AsAAowHqVapfFGeIvcCiFdKhyp+RW/pP/0+Vn/+PuSzKdiWtQgDpchsOpYQlKIF9W65QYSBNoOmIoTqX4FY6n4Sj4+gsXpMkyebUaFYZEpyMLNFeX3RFIgoLOa26ARLi0PzZaqDkittHABRZGkKn9A1Qz7tuhbmm7jvB8+LripY0XVDBqR/nPZ5sudz6Uv3CC4KIh2hCpajTpf0HYfgHBQQhkFr0v0iytgHDv33WZhmDnfcvhUNdTcjULLH5lWFw30voqKlHj0HX0Fr61UaEJubjjAN/jHpuq7j9JmzMIsOdPr27OQYJidG6Y45rLlnM/7T8yJFVYXmpuUYGelFxZJKbPnqU9i8lcDybazxLGKVBuxsNXtGijoyoLphxHUH52ezbFLlrKLMAgBRVsmCihApsq0iXApkfPgizrxzlAOLKRkoFLOwaM3HzhzBaMJGvKZMinDZ0kocPzGAG24Io6m1Ehf60gQWRWquyLpn08opiMYUTCYKuK0xjpPsoMK7fffqkYx/lm3Rzw043LyQS+HAa3tk3SYnE7LDuexEDjtaZfwWGswEVne34sPeDLXlont1M+acJC5eKsiNQvRf03RhkcHUXJ7pUhCKqBj30xgcTOK5nd/HyGRygQGNtI+lLaJyUVURw29+9rS4iooKDiVP7pSs/PvAfowOD+A7T2yHaxc5oDjS71VF56DSB9Mq4IW9u2Dnq1ATZ/OxVDqpxY0N5Plps4SW+nOI39SNVdX1uG3tlxYY0I0wzp07jc6VK3HiaA/SHBrKOAd0rl2H8cQoxpiOKvb4TKyKjlqAVchJZXMMIDsWmuuayISGH3z7Gbx19h1SrzAVQ+i+tRVmvohVrS0QLdQIaRi7eAE33bKCKT52VQo4TPS8/k+0ty2nwymoqWuAmZxGvL4RE5f7kUkm5czX3t6B6YwFz1albnQ1qHOPPSA1Mw43m8a97StpvUuwrqlN+Ch5FA3LwczMFN7939vo6lqFvgt96L907toyNGf7MXyxj9GnMHL+FL7x1E9w8shhWq8qS29sLIHs1AS++eNfIGMlpXJsT/ojS9BBbVUVnGgYw8NDOPnGHmz43CYMD/RxLrQl0K5Va1DPkc+xbOSdWjQ3N14FgBoYONePQ/t3o/P2e7D2gS+jQLsUo1aOo3pqZgLmRAKpqXFUR/l4Ji99wLEL0lhc4QmyM3rIZlIcuyK4PHAe0+MJRA0Vl6fnMDYyREc1MJPMIsVh1S2kFkQYYR0/uL4bLTcuhcEftDR3IBZvwuz0JFWcxPSF9zCdtXF6bBZH3nwDkxythQWLFxTPdQInFLUk3FERw0tIvrBImy41I+H9HkXusS0XWM7RsvKrGYCM1qOSbVcldR9g7sRRhMurCWIGsSVRasjG8qZa0s6XEG4s3opEU6J1sRoUzL8ESXtWVTnEqLxe5Mbi3DAMacWiyVQsqZBWf40GLKLL8A3G0HQ5r4ke/v6FIW7LB6fmsGJFB1rZXsWcaBOs8A6xoIhORKtx6pn3FBm9+KR3aBSoGFxkP+B0HDBD4Hz+WgCWx8VJZ5gOwJFavJZpnOsLVPayjkaYpHVqcBAhVoyiBMOqpNhV5K62GJmF7uUrmi+jlw1ImJjny+uQrLCBK5oE8hHPuuSyx91EJAAAAABJRU5ErkJggg=="
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    
+
+    <title>Topblissstar</title>
+    <script type="module" crossorigin src="/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/modal-02a9c211.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-0d4ab8a2.js">
+    <link rel="stylesheet" href="/assets/modal-3f4ad13c.css">
+    <link rel="stylesheet" href="/assets/vendor-0ded8c46.css">
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="header">
+  <div class="header-wrapper">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Welcome</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#ourphil" class="nav-link">Our Philosophy</a>
+        </li>
+        <li class="nav-item">
+          <a href="#signature" class="nav-link">Signature Treatments</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#spa" class="nav-link">Spa Packages</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#holistic" class="nav-link">Holistic Healing Therapies</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#client" class="nav-link">Client Experiences</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#ourspec" class="nav-link">Our Specialists</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#luxury" class="nav-link">Luxury Facilities</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#how" class="nav-link">How to Book</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="header-burger" data-modal-open>
+      <img
+        width="24"
+        height="24"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB5SURBVHgB7dYxCoAwEETRcfEglmLpibyZnshSLD1JMIL1BpSwEP5rs4ENmWIkAACAz7rixDQvkg0KkS4d++ZN9N7hu/yqMPbsIO8R5t5PilfYoRyhMf+CBUUo5QidfoQAAL9QJeqiSogqAQBto0rURZUQVQIAALTsBsljMwrlnUeMAAAAAElFTkSuQmCC"
+        alt="Burger button"
+        class="header-burger-img"
+      />
+    </button>
+  </div>
+</header>
+
+      <div id="modal" class="backdrop is-hidden" data-backdrop>
+  <div class="modal">
+    <div class="modal-header">
+      <button type="button" class="back-button is-hidden" data-modal-close>
+        <img
+          width="24"
+          height="24"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEoSURBVHgB7ZhhCoMwDIXjhgjqoTyKN5m72XYnfynoGjAgsjmtL7ZCPiioYHyvUfsokWEYhmEYF6EoipoHKaFafyo+8sjz/EFguKbU32PiRh4kSdIgTXAtrknalGXZzGYJ0onFzI/8DNIEaeJ08QLCRDDxwhETwcULPiaiES/sMRGdeGGLiWjFC2smNMXfCUTXda8syxJ3WPG5W5iqNE3JjWq+SLnjZ9u2DcXKshParw2sA8KyE4LWzHtloX8MwzBuuYYA3oFfwUy+ib7v3wQEamApnl8bN1hwNZ2rmICw9qvUSLFQtvznozWxZ5GKzoTPChuNiSPxILgJRLYJZgIZzE43oZEqTzMx3xdCB7MvAbDeeq/vvhA0mHEtrknaXHpr0TAMwzAMBT6kUd63ebDBwQAAAABJRU5ErkJggg=="
+          alt="burger-button"
+          class="back-img"
+        />
+      </button>
+    </div>
+
+    <nav class="modal-nav is-hidden" data-modal>
+      <ul class="modal-nav-list">
+        <li class="modal-nav-item">
+          <a href="/" class="modal-nav-link">Welcome</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#ourphil" class="modal-nav-link">Our Philosophy</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#signature" class="modal-nav-link">Signature Treatments</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#spa" class="modal-nav-link">Spa Packages</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#holistic" class="modal-nav-link"
+            >Holistic Healing Therapies</a
+          >
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#client" class="modal-nav-link">Client Experiences</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#ourspec" class="modal-nav-link">Our Specialists</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#luxury" class="modal-nav-link">Luxury Facilities</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="#how" class="modal-nav-link">How to Book</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="./privacy-policy.html" class="modal-nav-link"
+            >Privacy Policy</a
+          >
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="./terms.html" class="modal-nav-link">Terms & Conditions</a>
+        </li>
+
+        <li class="modal-nav-item">
+          <a href="./cookies.html" class="modal-nav-link">Cookies</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+      <section class="hero">
+  <div class="hero-wrap-dop">
+    <div class="hero-wrap-content">
+      <h1 class="hero-wrap-title">Welcome to Top Bliss Star</h1>
+      <p class="hero-wrap-text-one">
+        Where relaxation meets luxury—your journey to tranquility begins here.
+      </p>
+      <p class="hero-wrap-text-two">
+        At Top Bliss Star, we offer a sanctuary of peace and rejuvenation in the
+        heart of Istanbul. From personalized spa treatments to holistic
+        therapies, every experience is crafted to restore your balance and inner
+        harmony. Step into a world of serenity and let us take care of the rest.
+      </p>
+    </div>
+
+    <div class="hero-image-wrapper">
+      <picture class="hero-image-one">
+        <source
+          srcset="/assets/hero-big-desk-1x-27169a60.png "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/assets/hero-big-mob-1x-32f5b9f2.png "
+          media="(max-width: 1439px)"
+        />
+        <img src="/assets/hero-big-mob-1x-32f5b9f2.png" alt="Image basin" />
+      </picture>
+
+      <picture class="hero-image-two">
+        <source
+          srcset="/assets/hero-little-desk-1x-da625c9c.png "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="/assets/hero-little-mob-1x-05664f8b.png "
+          media="(max-width: 1439px)"
+        />
+        <img src="/assets/hero-little-mob-1x-05664f8b.png" alt="Image massage" />
+      </picture>
+    </div>
+  </div>
+</section>
+
+      <section id="ourphil" class="ourphil">
+  <div class="container">
+    <div class="ourphil-wrap">
+      <h2 class="ourphil-wrap-title">Our Philosophy</h2>
+      <p class="ourphil-wrap-text">
+        More than a spa—an escape for the mind, body, and soul.
+      </p>
+
+      <div class="ourphil-wrap-containers">
+        <div class="ourphil-containers">
+          <p class="ourphil-containers-numeric">01</p>
+          <h5 class="ourphil-containers-title">Personalized Relaxation</h5>
+          <p class="ourphil-containers-text">
+            Every treatment is tailored to your unique needs, ensuring a deeply
+            restorative experience.
+          </p>
+        </div>
+
+        <div class="ourphil-containers">
+          <p class="ourphil-containers-numeric">02</p>
+          <h5 class="ourphil-containers-title">Premium Organic Ingredients</h5>
+          <p class="ourphil-containers-text">
+            We use only the finest, organic, and cruelty-free products for your
+            skin and well-being.
+          </p>
+        </div>
+
+        <div class="ourphil-containers">
+          <p class="ourphil-containers-numeric">03</p>
+          <h5 class="ourphil-containers-title">Harmony & Balance</h5>
+          <p class="ourphil-containers-text">
+            We integrate traditional and modern wellness techniques to bring
+            harmony to your body and mind.
+          </p>
+        </div>
+
+        <div class="ourphil-containers">
+          <p class="ourphil-containers-numeric">04</p>
+          <h5 class="ourphil-containers-title">A Sensory Experience</h5>
+          <p class="ourphil-containers-text">
+            From aromatic essential oils to calming sounds and luxurious
+            textures, we engage all senses for the ultimate relaxation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="signature" class="signature">
+  <div class="container">
+    <div class="signature-wrap">
+      <h2 class="signature-wrap-title">Signature Treatments</h2>
+      <p class="signature-wrap-text">Indulgence, crafted to perfection.</p>
+
+      <div class="signature-wrap-containers swiper signatureSwiper">
+        <div class="swiper-wrapper">
+          <div class="signature-containers swiper-slide">
+            <picture class="signature-wrap-image">
+              <source
+                srcset="/assets/sign-desk1-1x-331092b4.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/sign-mob1-1x-185974b7.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/sign-mob1-1x-185974b7.png"
+                alt="Blissful Aromatherapy Massage"
+              />
+            </picture>
+            <h5 class="signature-containers-title">
+              Blissful Aromatherapy Massage
+            </h5>
+            <p class="signature-containers-text">
+              A sensory journey using essential oils to ease tension and elevate
+              your mood.
+            </p>
+          </div>
+
+          <div class="signature-containers swiper-slide">
+            <picture class="signature-wrap-image">
+              <source
+                srcset="/assets/sign-desk2-1x-995bbe09.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/sign-mob2-1x-aafc55fd.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/sign-mob2-1x-aafc55fd.png"
+                alt="Turkish Hammam Ritual"
+              />
+            </picture>
+            <h5 class="signature-containers-title">Turkish Hammam Ritual</h5>
+            <p class="signature-containers-text">
+              A centuries-old cleansing experience with steam, exfoliation, and
+              foam massage.
+            </p>
+          </div>
+
+          <div class="signature-containers swiper-slide">
+            <picture class="signature-wrap-image">
+              <source
+                srcset="/assets/sign-desk3-1x-ce8430db.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/sign-mob3-1x-5e4a4fe6.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/sign-mob3-1x-5e4a4fe6.png"
+                alt="Detox & Rejuvenation Wrap"
+              />
+            </picture>
+            <h5 class="signature-containers-title">
+              Detox & Rejuvenation Wrap
+            </h5>
+            <p class="signature-containers-text">
+              A body wrap enriched with mineral clays and botanicals to
+              eliminate toxins.
+            </p>
+          </div>
+
+          <div class="signature-containers swiper-slide">
+            <picture class="signature-wrap-image">
+              <source
+                srcset="/assets/sign-desk4-1x-848ec520.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/sign-mob4-1x-bbfad32b.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/sign-mob4-1x-bbfad32b.png"
+                alt="Radiance Facial Therapy"
+              />
+            </picture>
+            <h5 class="signature-containers-title">Radiance Facial Therapy</h5>
+            <p class="signature-containers-text">
+              A luxury skincare treatment designed to hydrate and restore your
+              natural glow.
+            </p>
+          </div>
+
+          <div class="signature-containers swiper-slide">
+            <picture class="signature-wrap-image">
+              <source
+                srcset="/assets/sign-desk5-1x-efdff193.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/sign-mob5-1x-7ea47fc3.png "
+                media="(max-width: 1439px)"
+              />
+              <img
+                src="/assets/sign-mob5-1x-7ea47fc3.png"
+                alt="Deep Tissue Healing Massage"
+              />
+            </picture>
+            <h5 class="signature-containers-title">
+              Deep Tissue Healing Massage
+            </h5>
+            <p class="signature-containers-text">
+              Designed for muscle recovery, this intensive massage relieves
+              deep-seated tension.
+            </p>
+          </div>
+
+          <div class="signature-containers swiper-slide">
+            <picture class="signature-wrap-image">
+              <source
+                srcset="/assets/sign-desk6-1x-4280a04f.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/sign-mob6-1x-8d097219.png "
+                media="(max-width: 1439px)"
+              />
+              <img src="/assets/sign-mob6-1x-8d097219.png" alt="Hot Stone Therapy" />
+            </picture>
+            <h5 class="signature-containers-title">Hot Stone Therapy</h5>
+            <p class="signature-containers-text">
+              Smooth, heated stones are placed along energy points to melt away
+              stress and restore balance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="spa" class="spa">
+  <div class="container">
+    <div class="spa-wrap">
+      <h2 class="spa-wrap-title">Spa Packages</h2>
+      <p class="spa-wrap-text">A curated escape for every need.</p>
+
+      <div class="spa-wrap-containers">
+        <div class="spa-wrap-container">
+          <p class="spa-wrap-container-numeric">3 hours</p>
+          <h5 class="spa-wrap-container-title">The Royal Escape</h5>
+          <p class="spa-wrap-container-text">
+            Indulge in a full-body exfoliation, deep massage, and a glowing
+            facial.
+          </p>
+        </div>
+
+        <div class="spa-wrap-container">
+          <p class="spa-wrap-container-numeric">2.5 hours</p>
+          <h5 class="spa-wrap-container-title title-two">
+            Couple’s Serenity Retreat
+          </h5>
+          <p class="spa-wrap-container-text">
+            A romantic spa journey with side-by-side massages and a private
+            relaxation suite.
+          </p>
+        </div>
+
+        <div class="spa-wrap-container">
+          <p class="spa-wrap-container-numeric">2 hours</p>
+          <h5 class="spa-wrap-container-title">Urban Detox</h5>
+          <p class="spa-wrap-container-text">
+            Perfect for city dwellers, this package combines lymphatic drainage,
+            a detox wrap, and herbal therapy.
+          </p>
+        </div>
+
+        <div class="spa-wrap-container">
+          <p class="spa-wrap-container-numeric">1.5 hours</p>
+          <h5 class="spa-wrap-container-title">Revive & Recharge</h5>
+          <p class="spa-wrap-container-text">
+            Target fatigue with an energizing body polish and stress-relieving
+            acupressure.
+          </p>
+        </div>
+
+        <div class="spa-wrap-container">
+          <p class="spa-wrap-container-numeric">Half-Day Spa</p>
+          <h5 class="spa-wrap-container-title">The Blissful Bride</h5>
+          <p class="spa-wrap-container-text">
+            A bridal preparation package featuring body treatments, facials, and
+            a relaxing soak.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="holistic" class="holistic">
+  <div class="container">
+    <div class="holistic-wrap">
+      <h2 class="holistic-title">Holistic Healing Therapies</h2>
+      <div class="holistic-wrap-text">
+        <p class="holistic-wrap-text-one">
+          Wellness is more than relaxation - it’s a way of life.
+        </p>
+        <div class="holistic-wrap-text-two">
+          <p class="holistic-wrap-text-two1">
+            Wellness is more than relaxation
+          </p>
+          <p class="holistic-wrap-text-two2">it’s a way of life.</p>
+        </div>
+      </div>
+
+      <div class="holistic-wrap-containers">
+        <div class="holistic-wrap-image">
+          <picture class="holistic-image-one">
+            <source
+              srcset="/assets/holis-desk1-1x-be7fa8fc.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/holis-mob1-1x-e646b538.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/holis-mob1-1x-e646b538.png"
+              alt="Photo of a swimming pool near the sea"
+            />
+          </picture>
+
+          <picture class="holistic-image-two">
+            <source
+              srcset="/assets/holis-desk2-1x-dee092ae.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/holis-mob2-1x-05a30c30.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/holis-mob2-1x-05a30c30.png"
+              alt="Photo of a large beach"
+            />
+          </picture>
+        </div>
+
+        <div class="holistic-wrap-contents">
+          <div class="holistic-wrap-content">
+            <h5 class="holistic-content-title">Reflexology Therapy</h5>
+            <p class="holistic-content-text">
+              Stimulating pressure points in the feet to promote overall
+              well-being.
+            </p>
+          </div>
+
+          <div class="holistic-wrap-content">
+            <h5 class="holistic-content-title">Sound Bath Meditation</h5>
+            <p class="holistic-content-text">
+              Immersive sound healing using crystal bowls to rebalance your
+              energy.
+            </p>
+          </div>
+
+          <div class="holistic-wrap-content">
+            <h5 class="holistic-content-title">Reiki Energy Healing</h5>
+            <p class="holistic-content-text">
+              A hands-on technique to align the body's energy fields and
+              encourage self-healing.
+            </p>
+          </div>
+
+          <div class="holistic-wrap-content">
+            <h5 class="holistic-content-title">Herbal Detox Soak</h5>
+            <p class="holistic-content-text">
+              A warm bath infused with medicinal herbs to release toxins and
+              relieve stress.
+            </p>
+          </div>
+
+          <div class="holistic-wrap-content">
+            <h5 class="holistic-content-title">
+              Guided Breathing & Meditation
+            </h5>
+            <p class="holistic-content-text">
+              A practice that integrates breathwork with mindfulness to achieve
+              deep relaxation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="client" class="client">
+  <div class="container">
+    <div class="client-wrap">
+      <h2 class="client-title">Client Experiences</h2>
+      <p class="client-text">
+        What our guests say about their journey with us.
+      </p>
+
+      <div class="client-wrap-containers swiper clientSwiper">
+        <div class="swiper-wrapper">
+          <div class="client-wrap-container swiper-slide">
+            <p class="client-container-text">
+              After a stressful week, I booked a Turkish Hammam session, and it
+              was absolutely incredible. I walked out feeling completely renewed
+              and light.
+            </p>
+            <p class="client-container-name">Leyla G.</p>
+            <p class="client-container-prof">Business Consultant</p>
+          </div>
+
+          <div class="client-wrap-container swiper-slide">
+            <p class="client-container-text">
+              The deep tissue massage worked wonders for my sore muscles. Their
+              therapists are incredibly skilled, and the ambiance is just
+              perfect.
+            </p>
+            <p class="client-container-name">Murat T.</p>
+            <p class="client-container-prof">Fitness Coach</p>
+          </div>
+
+          <div class="client-wrap-container swiper-slide">
+            <p class="client-container-text">
+              I’ve been to luxury spas around the world, but Top Bliss Star is
+              in a league of its own. The aromatherapy massage transported me to
+              pure bliss.
+            </p>
+            <p class="client-container-name">Elif K.</p>
+            <p class="client-container-prof">Frequent Traveler</p>
+          </div>
+
+          <div class="client-wrap-container swiper-slide">
+            <p class="client-container-text">
+              We booked the Couple’s Serenity Retreat, and it was the most
+              intimate and relaxing experience. Highly recommended for
+              honeymooners!
+            </p>
+            <p class="client-container-name">Cem O.</p>
+            <p class="client-container-prof">Newlywed</p>
+          </div>
+
+          <div class="client-wrap-container swiper-slide">
+            <p class="client-container-text dop-cl">
+              The prenatal massage was everything I needed—gentle, soothing, and
+              deeply comforting. I felt so cared for.
+            </p>
+            <p class="client-container-name">Selin A.</p>
+            <p class="client-container-prof">Expecting Mother</p>
+          </div>
+
+          <div class="client-wrap-container swiper-slide">
+            <p class="client-container-text dop-cl2">
+              Their holistic healing therapies are truly exceptional. The Reiki
+              session left me feeling recharged and centered.
+            </p>
+            <p class="client-container-name">Ahmet Y.</p>
+            <p class="client-container-prof">Wellness Enthusiast</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="ourspec" class="ourspec">
+  <div class="container">
+    <div class="ourspec-wrap">
+      <h2 class="ourspec-title">Client Experiences</h2>
+      <p class="ourspec-text">
+        What our guests say about their journey with us.
+      </p>
+
+      <div class="ourspec-wrap-containers swiper ourspecSwiper">
+        <div class="swiper-wrapper">
+          <div class="ourspec-wrap-container swiper-slide">
+            <picture class="ourspec-wrap-image">
+              <source
+                srcset="/assets/oursp-desk1-1x-6c7651ad.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/oursp-mob1-1x-51c71ea9.png "
+                media="(max-width: 1439px)"
+              />
+              <img src="/assets/oursp-mob1-1x-51c71ea9.png" alt="Merve Çelik" />
+            </picture>
+            <p class="ourspec-image-name">Merve Çelik</p>
+            <p class="ourspec-image-prof">Spa Director</p>
+            <p class="ourspec-image-text">
+              With over 15 years of experience in luxury wellness, Merve ensures
+              every guest’s experience is seamless and extraordinary.
+            </p>
+          </div>
+
+          <div class="ourspec-wrap-container swiper-slide">
+            <picture class="ourspec-wrap-image">
+              <source
+                srcset="/assets/oursp-desk2-1x-4a5fb57c.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/oursp-mob2-1x-3e0ca292.png "
+                media="(max-width: 1439px)"
+              />
+              <img src="/assets/oursp-mob2-1x-3e0ca292.png" alt="Dr. Emir Karaca" />
+            </picture>
+            <p class="ourspec-image-name">Dr. Emir Karaca</p>
+            <p class="ourspec-image-prof">Holistic Healer</p>
+            <p class="ourspec-image-text">
+              A specialist in energy healing, mindfulness, and breathwork
+              therapy.
+            </p>
+          </div>
+
+          <div class="ourspec-wrap-container swiper-slide">
+            <picture class="ourspec-wrap-image">
+              <source
+                srcset="/assets/oursp-desk3-1x-81d07ffa.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/oursp-mob3-1x-bef16eb5.png "
+                media="(max-width: 1439px)"
+              />
+              <img src="/assets/oursp-mob3-1x-bef16eb5.png" alt="Zeynep Yıldırım" />
+            </picture>
+            <p class="ourspec-image-name">Zeynep Yıldırım</p>
+            <p class="ourspec-image-prof">Lead Massage Therapist</p>
+            <p class="ourspec-image-text">
+              Expert in deep tissue, aromatherapy, and stress-relief techniques.
+            </p>
+          </div>
+
+          <div class="ourspec-wrap-container swiper-slide">
+            <picture class="ourspec-wrap-image">
+              <source
+                srcset="/assets/oursp-desk4-1x-f290d061.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/oursp-mob4-1x-1f6482da.png "
+                media="(max-width: 1439px)"
+              />
+              <img src="/assets/oursp-mob4-1x-1f6482da.png" alt="Ebru Demir" />
+            </picture>
+            <p class="ourspec-image-name">Ebru Demir</p>
+            <p class="ourspec-image-prof">Skincare Specialist</p>
+            <p class="ourspec-image-text">
+              Customizing facial treatments to suit every skin type and concern.
+            </p>
+          </div>
+
+          <div class="ourspec-wrap-container swiper-slide">
+            <picture class="ourspec-wrap-image">
+              <source
+                srcset="/assets/oursp-desk5-1x-be15eaf0.png "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="/assets/oursp-mob5-1x-6d6538b4.png "
+                media="(max-width: 1439px)"
+              />
+              <img src="/assets/oursp-mob5-1x-6d6538b4.png" alt="Hakan Şen" />
+            </picture>
+            <p class="ourspec-image-name">Hakan Şen</p>
+            <p class="ourspec-image-prof">Reflexologist</p>
+            <p class="ourspec-image-text">
+              Dedicated to the art of foot therapy and holistic relaxation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="luxury" class="luxury">
+  <div class="container">
+    <div class="luxury-wrap">
+      <h2 class="luxury-title">Luxury Facilities</h2>
+
+      <div class="luxury-wrap-containers">
+        <div class="luxury-wrap-container">
+          <picture class="ourspec-wrap-image">
+            <source
+              srcset="/assets/luxury-desk1-1x-be108283.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/luxury-mob1-1x-7a9cefa0.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/luxury-mob1-1x-7a9cefa0.png"
+              alt="Private Hammam Suites"
+            />
+          </picture>
+          <p class="ourspec-image-title">Private Hammam Suites</p>
+          <p class="ourspec-image-text">
+            Authentic Turkish hammams with heated marble and private steam
+            rooms.
+          </p>
+        </div>
+
+        <div class="luxury-wrap-container">
+          <picture class="ourspec-wrap-image">
+            <source
+              srcset="/assets/luxury-desk2-1x-dd34a2a4.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/luxury-mob2-1x-16d079eb.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/luxury-mob2-1x-16d079eb.png"
+              alt="Infinity Relaxation Pool"
+            />
+          </picture>
+          <p class="ourspec-image-title">Infinity Relaxation Pool</p>
+          <p class="ourspec-image-text">
+            A temperature-controlled pool designed for post-treatment
+            relaxation.
+          </p>
+        </div>
+
+        <div class="luxury-wrap-container">
+          <picture class="ourspec-wrap-image">
+            <source
+              srcset="/assets/luxury-desk3-1x-ba9d7df1.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/luxury-mob3-1x-5eb8c836.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/luxury-mob3-1x-5eb8c836.png"
+              alt="Aroma Therapy Lounges"
+            />
+          </picture>
+          <p class="ourspec-image-title">Aroma Therapy Lounges</p>
+          <p class="ourspec-image-text">
+            A tranquil space with herbal infusions and soft, calming music.
+          </p>
+        </div>
+
+        <div class="luxury-wrap-container">
+          <picture class="ourspec-wrap-image">
+            <source
+              srcset="/assets/luxury-desk4-1x-899bd46a.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/luxury-mob4-1x-6141289e.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/luxury-mob4-1x-6141289e.png"
+              alt="VIP Couples’ Spa Suites"
+            />
+          </picture>
+          <p class="ourspec-image-title">VIP Couples’ Spa Suites</p>
+          <p class="ourspec-image-text">
+            Exclusive spa rooms for couples, complete with personal saunas.
+          </p>
+        </div>
+
+        <div class="luxury-wrap-container">
+          <picture class="ourspec-wrap-image">
+            <source
+              srcset="/assets/luxury-desk5-1x-c18af67b.png "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/assets/luxury-mob5-1x-c744252b.png "
+              media="(max-width: 1439px)"
+            />
+            <img
+              src="/assets/luxury-mob5-1x-c744252b.png"
+              alt="Zen Meditation Gardens"
+            />
+          </picture>
+          <p class="ourspec-image-title">Zen Meditation Gardens</p>
+          <p class="ourspec-image-text">
+            Outdoor spaces infused with nature to promote inner calm.
+          </p>
+        </div>
+
+        <div class="luxury-wrap-container">
+          <p class="ourspec-image-text-six">Designed to soothe the senses.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section id="how" class="how">
+  <div class="container">
+    <div class="how-wrap">
+      <div class="how-wrap-title">
+        <h5 class="how-title">How to Book</h5>
+        <p class="how-text">Your blissful escape is just a booking away.</p>
+      </div>
+      <div class="how-wrap-coctacts">
+        <div class="how-coctacts-email">
+          <p class="how-coctacts-email-em">Contact us at:</p>
+          <p class="how-coctacts-email-link">
+            <a class="how-mail" href="mailto:info@topblissstar.com"
+              >info@topblissstar.com</a
+            >
+          </p>
+        </div>
+
+        <div class="how-coctacts-tel">
+          <p class="how-coctacts-tel-tel">Call us:</p>
+          <p class="how-coctacts-tel-link">
+            <a class="how-tel" href="tel:+90 212 555 7890">+90 212 555 7890</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <div id="modal-cookies" class="backdrop is-hidden" data-backdrop>
+  <div class="modal-cookies">
+    <div class="modal-cookies-text-wrap">
+      <p class="modal-cookies-title">Cookies</p>
+      <p class="modal-cookies-text">
+        We use cookies to improve your experience on our website. By browsing
+        this website, you agree to our use of cookies.
+      </p>
+    </div>
+    <div class="modal-cookies-dop-btn">
+      <button type="button" class="modal-cookies-accept">Accept Cookies</button>
+      <button type="button" class="modal-cookies-decline">
+        Decline cookies
+      </button>
+    </div>
+  </div>
+</div>
+
+      <footer class="footer">
+  <div class="footer-wrap">
+    <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <a href="./privacy-policy.html" class="footer-nav-link"
+          >Privacy Policy</a
+        >
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="./terms.html" class="footer-nav-link">Terms & Conditions</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="./cookies.html" class="footer-nav-link">Cookies</a>
+      </li>
+    </ul>
+
+    <div class="footer-text-wrap">
+      <p class="footer-text">© 2025 topblissstar.com, All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+  </body>
+</html>
