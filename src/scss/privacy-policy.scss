@@ -1,0 +1,65 @@
+@import './common/vars';
+
+.privacy-policy-section {
+  padding-top: 60px;
+}
+
+.privacy-policy-title {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.2;
+  padding-bottom: 32px;
+}
+
+.privacy-policy-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+.paragraph {
+  padding-bottom: 32px;
+}
+
+.privacy-policy-text-title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  padding-bottom: 32px;
+}
+
+.privacy-policy-text-bold {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-bottom: 16px;
+}
+
+.privacy-policy-wrap-list {
+  padding-left: 26px;
+}
+
+.privacy-policy-list {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  list-style-type: disc;
+}
+
+.privacy-policy-mail {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .privacy-policy-section {
+    padding-top: 100px;
+  }
+
+  .privacy-policy-title {
+    font-size: 120px;
+    line-height: 0.9;
+  }
+}

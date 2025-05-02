@@ -1,0 +1,68 @@
+@import './common/vars';
+
+.luxury {
+  scroll-margin-top: 50px;
+}
+
+.luxury-title {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.1;
+  text-align: center;
+  padding-bottom: 32px;
+  padding-top: 40px;
+}
+
+.luxury-wrap-containers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ourspec-image-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.ourspec-image-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $_text;
+}
+
+.ourspec-image-text-six {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  padding-top: 252px;
+  padding-bottom: 252px;
+}
+
+@media screen and (min-width: 1440px) {
+  .luxury-title {
+    padding-bottom: 60px;
+    padding-top: 100px;
+  }
+
+  .luxury-wrap-containers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px 24px;
+  }
+
+  .ourspec-image-title {
+    font-size: 32px;
+  }
+
+  .ourspec-image-text-six {
+    padding-left: 143px;
+    padding-top: 258px;
+    padding-bottom: 258px;
+  }
+}

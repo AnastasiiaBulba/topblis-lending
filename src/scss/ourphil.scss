@@ -1,0 +1,84 @@
+@import './common/vars';
+
+.ourphil {
+  scroll-margin-top: 40px;
+}
+
+.ourphil-wrap-title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.1;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 24px;
+}
+
+.ourphil-wrap-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  color: $_text;
+  padding-bottom: 32px;
+}
+
+.ourphil-wrap-containers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ourphil-containers {
+  border: 1px solid $_border-green;
+  padding: 32px 24px;
+  width: 343px;
+}
+
+.ourphil-containers-numeric {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  padding-bottom: 16px;
+  color: $_border-green;
+}
+
+.ourphil-containers-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-bottom: 8px;
+}
+
+.ourphil-containers-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $_border-green;
+}
+
+@media screen and (min-width: 1440px) {
+  .ourphil {
+    scroll-margin-top: 0;
+  }
+  .ourphil-wrap-title {
+    padding-top: 100px;
+  }
+
+  .ourphil-wrap-text {
+    padding-bottom: 60px;
+  }
+
+  .ourphil-wrap-containers {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .ourphil-containers {
+    width: 658px;
+  }
+
+  .ourphil-containers-title {
+    font-size: 32px;
+  }
+}

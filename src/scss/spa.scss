@@ -1,0 +1,94 @@
+@import './common/vars';
+
+.spa {
+  background-color: $_back-green;
+  scroll-margin-top: 40px;
+}
+
+.spa-wrap-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.1;
+  padding-bottom: 24px;
+}
+
+.spa-wrap-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  color: $_text;
+  padding-bottom: 32px;
+}
+
+.spa-wrap-containers {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.spa-wrap-container {
+  border: 1px solid #babfbe;
+  padding: 32px 24px;
+  width: 343px;
+  height: 258px;
+  background: $_back;
+}
+
+.spa-wrap-container-numeric {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $_text;
+  padding-bottom: 16px;
+}
+
+.spa-wrap-container-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-bottom: 40px;
+}
+
+.spa-wrap-container-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $_text;
+}
+
+@media screen and (min-width: 1440px) {
+  .spa {
+    scroll-margin-top: 0;
+  }
+
+  .spa-wrap {
+    padding-top: 80px;
+  }
+
+  .spa-wrap-text {
+    padding-bottom: 60px;
+  }
+
+  .spa-wrap-containers {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .spa-wrap-container {
+    width: 252px;
+    height: 367px;
+  }
+
+  .spa-wrap-container-title {
+    font-size: 32px;
+    padding-bottom: 80px;
+  }
+
+  .title-two {
+    padding-bottom: 40px;
+  }
+}

@@ -1,0 +1,124 @@
+@import './common/vars';
+
+.client {
+  scroll-margin-top: 50px;
+  overflow: visible;
+}
+
+.client-wrap {
+  overflow: visible;
+}
+
+.client-title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.1;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.client-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  color: $_text;
+  padding-bottom: 32px;
+}
+
+.client-wrap-containers {
+  overflow: visible;
+}
+
+.clientSwiper {
+  overflow: visible;
+  display: flex;
+}
+
+.swiper-slide {
+  overflow: visible;
+  z-index: 1;
+}
+
+.client-wrap-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  border: 1px solid $_border-green;
+  padding: 32px 14px;
+  background: $_back-footer;
+  cursor: pointer;
+}
+
+.client-container-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  padding-bottom: 61px;
+}
+
+.client-container-name {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-bottom: 4px;
+}
+
+.client-container-prof {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $_text;
+}
+
+.clientSwiper .swiper-wrapper {
+  display: flex;
+}
+
+.clientSwiper .swiper-slide {
+  flex-shrink: 0;
+}
+
+.dop-cl {
+  padding-bottom: 80px;
+}
+
+.dop-cl2 {
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 1440px) {
+  .client {
+    scroll-margin-top: 40px;
+  }
+
+  .client-wrap {
+    padding-top: 60px;
+  }
+
+  .client-text {
+    padding-bottom: 60px;
+  }
+
+  .client-wrap-container {
+    // width: 300px;
+    height: 255px;
+  }
+
+  .client-container-name {
+    bottom: 50px;
+  }
+
+  .client-container-prof {
+    bottom: 32px;
+  }
+
+  .dop-cl {
+    padding-bottom: 61px;
+  }
+
+  .dop-cl2 {
+    padding-bottom: 61px;
+  }
+}

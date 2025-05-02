@@ -1,0 +1,56 @@
+@import './modal.scss';
+@import './modal-cookies.scss';
+@import './header.scss';
+@import './hero.scss';
+@import './ourphil.scss';
+@import './signature.scss';
+@import './spa.scss';
+@import './holistic.scss';
+@import './client.scss';
+@import './ourspec.scss';
+@import './luxury.scss';
+@import './how.scss';
+@import './footer.scss';
+
+@import './common/reset';
+@import './common/mixins';
+@import './common/breakpoints';
+@import './common/vars';
+
+:root {
+  font-family: 'Libre Baskerville', sans-serif;
+  color: $_black;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $_back;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 375px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px;
+  overflow: visible;
+}
+
+.is-hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+  }
+}

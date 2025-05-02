@@ -1,0 +1,78 @@
+@import './common/vars';
+
+.ourspec {
+  scroll-margin-top: 50px;
+}
+
+.ourspec-wrap {
+  padding-top: 40px;
+}
+
+.ourspec-title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.1;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.ourspec-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  color: $_text;
+  padding-bottom: 32px;
+}
+
+.ourspec-wrap-container {
+  width: 324px;
+  height: 677px;
+  cursor: pointer;
+}
+
+.ourspec-image-name {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.ourspec-image-prof {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $_text;
+  padding-bottom: 16px;
+}
+
+.ourspec-image-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  width: 324px;
+}
+
+@media screen and (min-width: 1440px) {
+  .ourspec {
+    scroll-margin-top: 0;
+  }
+
+  .ourspec-wrap {
+    padding-top: 100px;
+  }
+
+  .ourspec-text {
+    padding-bottom: 60px;
+  }
+
+  .ourspec-wrap-container {
+    width: 324px;
+    height: 677px;
+  }
+
+  .ourspec-image-text {
+    width: 420px;
+  }
+}

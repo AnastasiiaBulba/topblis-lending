@@ -1,0 +1,98 @@
+@import './common/vars';
+
+.how {
+  scroll-margin-top: 50px;
+  background-color: $_back-green;
+}
+
+.how-wrap {
+  padding-top: 40px;
+}
+
+.how-title {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.how-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  color: $_text;
+  padding-bottom: 32px;
+}
+
+.how-coctacts-email {
+  padding: 16px 24px;
+  width: 343px;
+  height: 97px;
+  text-align: center;
+  border: 1px solid $_border-green;
+}
+
+.how-coctacts-email-em {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-bottom: 16px;
+}
+
+.how-coctacts-email-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+.how-coctacts-tel {
+  padding: 16px 24px;
+  width: 343px;
+  height: 97px;
+  text-align: center;
+  border: 1px solid $_border-green;
+}
+
+.how-coctacts-tel-tel {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-bottom: 16px;
+}
+
+.how-coctacts-tel-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+}
+
+.how-tel {
+}
+
+@media screen and (min-width: 1440px) {
+  .how-wrap {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 134px;
+  }
+
+  .how-wrap-title {
+    padding-top: 20px;
+    width: 517px;
+  }
+
+  .how-title {
+    text-align: left;
+  }
+
+  .how-text {
+    text-align: left;
+  }
+
+  .how-wrap-coctacts {
+    display: flex;
+  }
+}

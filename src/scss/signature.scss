@@ -1,0 +1,99 @@
+@import './common/vars';
+
+.signature {
+  background-color: $_back-green;
+  scroll-margin-top: 40px;
+}
+
+.signature-wrap {
+  padding-top: 40px;
+}
+
+.signature-wrap-title {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.1;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.signature-wrap-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  color: $_text;
+  padding-bottom: 32px;
+}
+
+.signature-wrap-containers {
+  height: 513px;
+}
+
+.signature-containers {
+  width: 324px;
+  cursor: pointer;
+}
+
+.signature-containers-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.1;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.signature-containers-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.42;
+  color: $_text;
+}
+
+.signatureSwiper {
+  overflow: hidden;
+}
+
+.signatureSwiper .swiper-wrapper {
+  display: flex;
+}
+
+.signatureSwiper .swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .signature {
+    scroll-margin-top: 0;
+  }
+
+  .signature-wrap {
+    padding-top: 100px;
+  }
+
+  .signature-wrap-text {
+    padding-bottom: 60px;
+  }
+
+  .signature-wrap-containers {
+    height: 656px;
+  }
+
+  .signature-containers {
+    width: 536px;
+  }
+
+  .signatureSwiper {
+    overflow: hidden;
+  }
+
+  .signatureSwiper .swiper-wrapper {
+    display: flex;
+  }
+
+  .signatureSwiper .swiper-slide {
+    flex-shrink: 0;
+    width: auto;
+  }
+}
